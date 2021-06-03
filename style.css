@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #1c1c1d;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #4b4276;
+  padding: 30px 0px;
+  position: fixed;
+}
+
+.wrapper .sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #050505;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}    
+
+.wrapper .sidebar ul li a{
+  color: #bdb8d7;
+  display: block;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #594f8d;
+}
+    
+.wrapper .sidebar ul li:hover a{
+  color: #fff;
+}
+ 
+.wrapper .sidebar .social_media{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #594f8d;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #bdb8d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.wrapper .main_content .header{
+  padding: 20px;
+  background: #fff;
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+
+@media (max-height: 500px){
+  .social_media{
+    display: none !important;
+  }
+}
+
+
+
+
+body{
+    margin: 0;
+    /*  091 Eternal Constance  */
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+:root{
+  --primary-gradient:  linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  max-width: 1500px;
+  margin: auto;
+  /* 069 Purple Division */
+  background-image: linear-gradient(to top, #000000 0%, #000000 100%);
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.4);
+  border-radius: .2rem;
+  position: relative;
+}
+
+.mobile-view{
+  position: absolute;
+  top: 0%;
+  display: none;
+}
+.mobile-view img{
+  width: 100%;
+}
+ .tablet-view{
+   position: absolute;
+   top: 0%;
+   display: none;
+}
+.tablet-view img{
+  width: 100%;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Buttons */
+.container .title{
+  width: 90%;
+  height: 20%;
+  text-align: center;  
+  padding: 2rem 2rem;
+  margin: 9rem 0;
+  z-index: 9999;
+}
+.container h1{
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 3em;
+  color: aliceblue;
+}
+
+.container p{
+  font-family: 'Muli', sans-serif;
+  color: #ececf0bd;
+}
+
+button{
+  font-family: 'Muli', sans-serif;
+  color: black;
+  font-size: 1rem;
+  padding: .8rem 2.3rem;
+  margin: 0 .1rem;
+  border: 0;
+  border-radius: 3rem;
+  background: var(--primary-gradient);
+  cursor: pointer;
+}
+
+.clip-svg {
+    clip-path: url(#myClip);
+  }
+
+
+  /***********Car Animation *******/
+
+  
+.night{
+    height: 560px;
+    width: 700px;
+    background:url('./assets/background.png');  
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.surface{
+  height: 140px;
+  width: 500%;
+  display: block;
+  background:url('./assets/Img_02.png');
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  background-repeat: repeat-x;
+}
+
+.moveRight{
+  animation: moveRight 6s linear infinite;
+}
+
+@keyframes moveRight{
+  100%{
+    transform: translateX(-2950px);
+  }
+}
+
+/* Made Changes */
+.car{
+  position: absolute;
+  bottom: 43px;
+  left: 24%;
+}
+
+.suspension{
+  animation: suspension 1s linear infinite;
+}
+
+@keyframes suspension{
+  100%{transform: translateY(-1px);}
+  50%{transform: translateY(2px);}
+  0%{transform: translateY(-1px);}
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 1013px){
+  .graphic{
+    display: none;
+  }
+  .container{
+    grid-template-columns: 100%;
+  }
+  .tablet-view{
+    display: block;
+  }
+  .container .title{
+    padding: 0 .9rem;
+  }
+  .container .title h1{
+    font-size: 2rem;
+  }
+  .container .title{
+    margin: 3rem 1rem;
+  }
+}
+
+@media only screen and (max-width: 678px){
+  .tablet-view{
+    display: none;
+  }
+  .mobile-view{
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 402px){
+  .mobile-view{
+    display: none;
+  }
+  .container .title{
+    margin:0;
+  }
+}
